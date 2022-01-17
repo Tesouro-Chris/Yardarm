@@ -25,7 +25,7 @@ namespace Yardarm.SystemTextJson.UnitTests.Client
 
             // Act
 
-            string result = JsonHelpers.GetDiscriminator(ref reader, PropertyName);
+            string result = DiscriminatorHelpers.GetDiscriminator(ref reader, PropertyName);
 
             // Assert
 
@@ -44,7 +44,7 @@ namespace Yardarm.SystemTextJson.UnitTests.Client
 
             // Act
 
-            string result = JsonHelpers.GetDiscriminator(ref reader, PropertyName);
+            string result = DiscriminatorHelpers.GetDiscriminator(ref reader, PropertyName);
 
             // Assert
 
@@ -63,7 +63,7 @@ namespace Yardarm.SystemTextJson.UnitTests.Client
 
             // Act
 
-            string result = JsonHelpers.GetDiscriminator(ref reader, PropertyName);
+            string result = DiscriminatorHelpers.GetDiscriminator(ref reader, PropertyName);
 
             // Assert
 
@@ -82,7 +82,7 @@ namespace Yardarm.SystemTextJson.UnitTests.Client
 
             // Act
 
-            string result = JsonHelpers.GetDiscriminator(ref reader, PropertyName);
+            string result = DiscriminatorHelpers.GetDiscriminator(ref reader, PropertyName);
 
             // Assert
 
@@ -101,7 +101,7 @@ namespace Yardarm.SystemTextJson.UnitTests.Client
 
             // Act
 
-            string result = JsonHelpers.GetDiscriminator(ref reader, PropertyName);
+            string result = DiscriminatorHelpers.GetDiscriminator(ref reader, PropertyName);
 
             // Assert
 
@@ -122,7 +122,7 @@ namespace Yardarm.SystemTextJson.UnitTests.Client
                 var reader = new Utf8JsonReader(Utf8Encoding.GetBytes(json));
                 reader.Read();
 
-                return JsonHelpers.GetDiscriminator(ref reader, PropertyName);
+                return DiscriminatorHelpers.GetDiscriminator(ref reader, PropertyName);
             });
         }
 

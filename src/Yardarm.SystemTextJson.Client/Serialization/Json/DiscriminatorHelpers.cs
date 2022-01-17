@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Text;
 using System.Text.Json;
 
 namespace RootNamespace.Serialization.Json
 {
-    internal static class JsonHelpers
+    internal static class DiscriminatorHelpers
     {
         public static string? GetDiscriminator(ref Utf8JsonReader reader, ReadOnlySpan<byte> utf8PropertyName)
         {

@@ -113,6 +113,14 @@ namespace Yardarm.SystemTextJson.Helpers
             public static TypeSyntax JsonConverterName(TypeSyntax t) =>
                 QualifiedName(Name, GenericName(Identifier("JsonConverter"),
                     TypeArgumentList(SingletonSeparatedList(t))));
+
+            public static NameSyntax JsonSerializableAttributeName { get; } = QualifiedName(
+                Name,
+                IdentifierName("JsonSerializableAttribute"));
+
+            public static NameSyntax JsonSerializerContextName { get; } = QualifiedName(
+                Name,
+                IdentifierName("JsonSerializerContext"));
         }
 
         public static NameSyntax Utf8JsonReader { get; } = QualifiedName(
